@@ -1,6 +1,6 @@
 --create a store database
 
-CREATE TABLE clothing_store (id INTEGER, name TEXT, brand TEXT, style TEXT, price INTEGER);
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, name TEXT, brand TEXT, style TEXT, price INTEGER);
 
 INSERT INTO clothing_store VALUES (1, "crop top", "Parasuco", "casual", 20.99);
 INSERT INTO clothing_store VALUES (2, "jeans", "Levi's", "casual", 29.99);
