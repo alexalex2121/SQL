@@ -1,0 +1,32 @@
+--create a store database
+
+CREATE TABLE clothing_store (id INTEGER, name TEXT, brand TEXT, style TEXT, price INTEGER);
+
+INSERT INTO clothing_store VALUES (1, "crop top", "Parasuco", "casual", 20.99);
+INSERT INTO clothing_store VALUES (2, "jeans", "Levi's", "casual", 29.99);
+INSERT INTO clothing_store VALUES (3, "skirt", "Gucci", "business casual", 45.99);
+INSERT INTO clothing_store VALUES (4, "shorts", "sketchers", "athletic wear", 25.99);
+INSERT INTO clothing_store VALUES (5, "shirt", "Gap", "casual", 12.99);
+INSERT INTO clothing_store VALUES (6, "bathing suit", "Lululemon", "athletic wear", 34);
+INSERT INTO clothing_store VALUES (7, "dress pants", "Gucci", "business", 98);
+INSERT INTO clothing_store VALUES (8, "sweater", "Ralph Lauren", "casual", 56);
+INSERT INTO clothing_store VALUES (9, "dress", "Ralph Lauren", "formal", 269);
+INSERT INTO clothing_store VALUES (10, "tights", "Lululemon", "athletic", 69.99);
+INSERT INTO clothing_store VALUES (11, "pants", "Parasuco", "business", 79);
+INSERT INTO clothing_store VALUES (12, "tank top", "Gap", "casual", 10);
+INSERT INTO clothing_store VALUES (13, "hoodie", "Gap", "casual", 25);
+INSERT INTO clothing_store VALUES (14, "mini skirt", "Gucci", "formal", 36);
+INSERT INTO clothing_store VALUES (15, "blazer", "Ralph Lauren", "business", 99);
+
+--display database ordered by price
+SELECT * FROM clothing_store 
+ORDER BY price DESC;
+
+--display average price for casual style
+SELECT AVG(price) FROM clothing_store
+WHERE style = "casual"
+
+--what are the top 5 most expensive clothes
+SELECT name, price FROM clothing_store
+ORDER BY price DESC
+LIMIT 5;
